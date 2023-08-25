@@ -1,5 +1,5 @@
 low=1
-high=10000
+high=1000
 
 print("please choose a number between 1 to 1000")
 input("press Enter to run")
@@ -22,5 +22,6 @@ while low!=high:
 
     
     guesses=guesses +1          
+    
 else:
     print("win win")

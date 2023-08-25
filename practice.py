@@ -1,18 +1,8 @@
-ans=55
+for i in range(1,5):
 
-guess=int(input())
-guesses=1
-
-while guess!=ans:
-    if guess>ans:
-        print("lower")
-        guess=int(input())
-    else:
-        print("higher")
-        guess=int(input())
-
-    guesses=1+guesses    
-else:
-    print("correct {}".format(guesses))    
-
-print("sss")           
+    for j in range(1,8):
+        if (j>=5-i and j<=3+i):
+           print("*",end="")
+        else:
+            print(" ",end="")
+    print()           

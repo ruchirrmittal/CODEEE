@@ -85,7 +85,7 @@ for part in available_parts:
 """ 
 #using enumerate to replace the loop above
 
-available_parts=["a","b","c","d","e"]
+# available_parts=["a","b","c","d","e"]
 
 #for number,part in enumerate(available_parts):
 #    print("{0}: {1}".format(number+1,part))

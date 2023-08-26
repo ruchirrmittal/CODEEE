@@ -1,7 +1,7 @@
-for num in range(1,200):
-    if num>1:
-        for j in range(2,num):
-            if (num%j)==0:
-                break
-        else:
-            print(num)
+parts=["a","b","c","d","e"]
+
+valid_choices=[]
+
+for i in range(1,len(parts)+1):
+    valid_choices.append(i)
+print(valid_choices) 

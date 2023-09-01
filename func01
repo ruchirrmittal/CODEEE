@@ -1,0 +1,149 @@
+# def add(a,b):
+    
+#     result=a+b
+#     return result
+
+
+#  answer=add(3,4)
+# print(answer)
+# -----------------------------------------
+
+
+# str="arraya"
+# print(str[::-1])
+# ------------------------------------------
+
+
+# def is_pal(string):
+#     return string.casefold()[::-1]==string.casefold()
+
+# word=input("enter a string \n")
+# ans=is_pal(word)
+
+# if ans is True:
+#     print("{} is a palindrom".format(word))
+# else:
+#     print("{} is not a palindrome".format(word))    
+# --------------------------------------------------
+
+
+# def is_pal(sen):
+#     sen1=""
+
+#     for char in sen:
+#         if char.isalnum():
+#             sen1+=char
+    
+#     print(sen1)        
+#     return sen1.casefold()[::-1]==sen1.casefold() 
+
+
+# sent=input("Enter a sen \n")
+# ans=is_pal(sent)
+# print(ans)
+# if ans is True:
+#     print("yes it is")
+# else:
+#     print("its not")    
+# ------------------------------------
+
+
+# def sum_eo(n,t):
+    
+
+#     if t.casefold()=='e':
+#         sum=0
+#         for i in range(0,n,2):
+#             sum+=i
+        
+#         return sum
+    
+#     elif t.casefold()=='o':
+#         sum=0
+#         for i in range(0,n,1):
+#             if not i%2==0:
+#              sum+=i
+#         return sum
+     
+#     else:
+#         return -1
+
+# num=int(input("Enter the number \n"))
+# tt=input("Enter operation \n")
+# ans=sum_eo(num,tt)
+# print(ans)        
+                        
+
+# def sum_eo(n, t):
+#     """Sum even or odd numbers in range.
+
+#     Return the sum of even or odd natural numbers, in the range 1..n-1.
+
+#     :param n: The endpoint of the range. The numbers from 1 to n-1 will be summed.
+#     :param t: 'e' to sum even numbers, 'o' to sum odd numbers.
+#     :return: The sum of the even or odd numbers in the range.
+#             Returns -1 if `t` is not 'e' or 'o'.
+#     """
+#     if t == "e":
+#         start = 2
+#     elif t == 'o':
+#         start = 1
+#     else:
+#         return -1
+
+#     return sum(range(start, n, 2))
+
+
+# x = sum_eo(10, 'e')
+# print(x)
+
+
+# --------------------------------------
+# 
+
+# a=7
+# if a==7:
+#     raise ValueError("a is seven")
+# ---------------------------
+
+# def multiply(x, y):
+#     """
+#     Multiply 2 numbers.
+ 
+#     Although this function is intended to multiply 2 numbers,
+#     you can also use it to multiply a sequence.  If you pass
+#     a string, for example, as the first argument, you'll get
+#     the string repeated `y` times as the returned value.
+ 
+#     :param x: The first number to multiply.
+#     :param y: The number to multiply `x` by.
+#     :return: The product of `x` and `y`.
+#     """
+#     result = x * y
+#     return result
+
+# print(multiply.__doc__)
+# ------------------------------------
+
+
+# ***FIBONACCI***
+
+
+def fib(n):
+
+    if 0<=n<=1:
+        return n
+    
+    n1,n2=1,0
+
+    result=None
+
+    for i in range(n-1):
+        result=n1+n2
+        n2=n1
+        n1=result
+
+    return result
+
+for i in range(20):
+    print(i,fib(i))

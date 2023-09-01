@@ -129,21 +129,47 @@
 # ***FIBONACCI***
 
 
-def fib(n):
+# def fib(n):
 
-    if 0<=n<=1:
-        return n
+#     if 0<=n<=1:
+#         return n
     
-    n1,n2=1,0
+#     n1,n2=1,0
 
-    result=None
+#     result=None
 
-    for i in range(n-1):
-        result=n1+n2
-        n2=n1
-        n1=result
+#     for i in range(n-1):
+#         result=n1+n2
+#         n2=n1
+#         n1=result
 
-    return result
+#     return result
 
-for i in range(20):
-    print(i,fib(i))
+# for i in range(20):
+#     print(i,fib(i))
+# ------------------------------------------------
+
+# def add(a,b: int) ->bool:
+    
+#     result=a+b
+#     return result
+
+
+# answer=add()
+# print(answer)
+
+# sen=input(" \n")
+# sen1=sen.split()
+# print(sen1)
+
+# for index in range(len(sen1)-1,-1,-1):
+#     print(sen1[index],end=" ")
+def reverseString(input_str: str) -> str:
+    words = input_str.split()
+    reversed_str = " ".join(reversed(words))
+    return reversed_str
+
+# Example usage:
+original_str = input("Enter a string: ")
+reversed_result = reverseString(original_str)
+print("Reversed string:", reversed_result)

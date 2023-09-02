@@ -164,12 +164,19 @@
 
 # for index in range(len(sen1)-1,-1,-1):
 #     print(sen1[index],end=" ")
-def reverseString(input_str: str) -> str:
-    words = input_str.split()
-    reversed_str = " ".join(reversed(words))
-    return reversed_str
 
-# Example usage:
-original_str = input("Enter a string: ")
-reversed_result = reverseString(original_str)
-print("Reversed string:", reversed_result)
+# def reverseString(input_str: str) -> str:
+#     words = input_str.split()
+#     reversed_str = " ".join(reversed(words))
+#     return reversed_str
+
+# # Example usage:
+# original_str = input("Enter a string: ")
+# reversed_result = reverseString(original_str)
+# print("Reversed string:", reversed_result)
+
+str="cb we ewf w f we"
+a=str.split()
+print(a)
+aa=" ".join(a)
+print(aa)

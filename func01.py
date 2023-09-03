@@ -175,8 +175,139 @@
 # reversed_result = reverseString(original_str)
 # print("Reversed string:", reversed_result)
 
-str="cb we ewf w f we"
-a=str.split()
-print(a)
-aa=" ".join(a)
-print(aa)
+# str="cb we ewf w f we"
+# a=str.split()
+# print(a)
+# aa=" ".join(a)
+# print(aa)
+
+# ------------------------------
+
+# low=1
+# high=1000
+
+# print("please choose a number between 1 to 1000")
+# input("press Enter to run")
+
+
+# LOW=1
+# HIGH=1000
+
+# def guessbin(number,LOW,HIGH):
+#     guesses=1
+
+#     while True:
+#         guess=LOW+(HIGH-LOW)//2
+#         # hi_lo=input("my guess is {}. what to do next?".format(guess)).casefold()
+
+#         # if hi_lo=="h":
+#         if guess<number:
+#             LOW=guess+1
+#         # elif hi_lo=="l":
+#         elif guess>number:
+    
+#             HIGH=guess-1
+#         # elif hi_lo=="c":
+#         elif guess==number:
+#             return guesses
+#             # print("winner in {}".format(guesses))
+#             # break
+#         # else:
+#         #     print("enter something") 
+
+    
+#         guesses=guesses +1          
+    
+# for numbers in range(LOW,HIGH+1):
+#     nog=guessbin(numbers,LOW,HIGH)
+#     print("{} in {} guesses".format(numbers,nog))
+
+# -----------------------------------------------------
+
+
+# LOW=1
+# HIGH=1000
+
+# def guessbin(number,LOW,HIGH):
+#     guesses=1
+
+#     while True:
+#         guess=LOW+(HIGH-LOW)//2
+#         # hi_lo=input("my guess is {}. what to do next?".format(guess)).casefold()
+
+#         # if hi_lo=="h":
+#         if guess<number:
+#             LOW=guess+1
+#         # elif hi_lo=="l":
+#         elif guess>number:
+    
+#             HIGH=guess-1
+#         # elif hi_lo=="c":
+#         elif guess==number:
+#             return guesses
+#             # print("winner in {}".format(guesses))
+#             # break
+#         # else:
+#         #     print("enter something") 
+
+    
+#         guesses=guesses +1          
+
+
+# corr=0
+# maxc=0
+
+# for numbers in range(LOW,HIGH+1):
+#     nog=guessbin(numbers,LOW,HIGH)
+#     print("{} in {} guesses".format(numbers,nog))
+
+#     if nog>maxc:
+#         maxc,corr=nog,1
+#     elif nog==maxc:
+#         corr+=1
+
+# print("{} times {} guesses".format(corr,maxc))     
+
+
+import random
+
+def fizz_buzz(number):
+    if number%15==0:
+        return "fizz buzz"
+    elif number%3==0:
+        return "fizz"
+    elif number%5==0:
+        return "buzz"
+    else:
+        return str(number)
+    
+
+# while True:
+#     ans=random.randint(1,100)
+#     res=fizz_buzz(ans)
+#     if res is False:
+#         print("lost")
+#         break
+    
+#     ans=int(input("enter yours \n"))
+#     res=fizz_buzz(ans)
+#     if res is False:
+#         print(" you lost")
+#         break
+
+input("Press enter")
+print()
+
+next=0
+
+while next<99:
+    next+=1
+    print(fizz_buzz(next))
+    next+=1
+    correct_answer=fizz_buzz(next)
+    p1=input("enter yours \n")
+    if p1 != correct_answer:
+        print("{}".format(correct_answer))
+        break
+else:
+    print("well done {}".format(next))    

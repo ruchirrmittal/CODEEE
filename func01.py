@@ -314,7 +314,70 @@
 
 # ---------------------------
 
-a=input("")
+# def factorial(number:int) -> int:
+#     """
+#     """
+#     if number==1 or number==0:
+#         return 1
+    
 
-aa=a.split()
-print(aa)
+        
+#     return number* factorial(number-1)  
+
+# for n in range(6):
+#     ans=factorial(n)
+#     print("{} {}".format(n,ans))
+    
+# def factorial(n: int) -> int:
+#     """Return n! (0! is 1)."""
+#     if n <= 1:
+#         return 1
+ 
+#     result = 2
+#     for x in range(3, n + 1):
+#         result *= x
+ 
+#     return result
+ 
+ 
+# for i in range(6):
+#     print(i, factorial(i))    
+# ------------------------
+
+
+# number=(1,4,2,4,2,3)
+
+# print(number)
+# print(*number)
+
+# for i in number:
+#     print(i)
+
+# def a(arg):
+#     print(arg)
+#     print(*arg)
+
+#     for i in arg:
+#         print(i)
+
+# a(number)
+# a(1,4,2,4,2,3)
+# a((1,4,2,4,2,3))
+
+
+# def sum(*args):
+#     result=0
+#     print(args)
+#     for value in args:
+#         result+=value
+#     return result
+
+# print(sum(1,2,3,4,5))        
+
+a=input("enter")
+aa=a.split(" ")
+sum=0
+for numbers in aa:
+    sum+=int(numbers)
+
+print(sum)    

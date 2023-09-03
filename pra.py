@@ -30,15 +30,21 @@
 # for i in range(len(lis1)):
 
 
-n = int(input())
-arr = map(int, input().split())
+# n = int(input())
+# arr = map(int, input().split())
     
-a=sorted(arr)
+# a=sorted(arr)
     
-for i in range(n):
-    if a[(n-1)-i]==a[(n-2)-i]:
+# for i in range(n):
+#     if a[(n-1)-i]==a[(n-2)-i]:
         
-        continue
-    else:
-        print(a[(n-2)-i])
-        break    
+#         continue
+#     else:
+#         print(a[(n-2)-i])
+#         break    
+
+str="my name is lobe"
+lis=str.split()
+print(lis)
+s="-".join(lis)
+print(s)

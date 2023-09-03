@@ -267,47 +267,54 @@
 #         corr+=1
 
 # print("{} times {} guesses".format(corr,maxc))     
+# ------------------------------------------------------------------------------
 
+# import random
 
-import random
-
-def fizz_buzz(number):
-    if number%15==0:
-        return "fizz buzz"
-    elif number%3==0:
-        return "fizz"
-    elif number%5==0:
-        return "buzz"
-    else:
-        return str(number)
+# def fizz_buzz(number):
+#     if number%15==0:
+#         return "fizz buzz"
+#     elif number%3==0:
+#         return "fizz"
+#     elif number%5==0:
+#         return "buzz"
+#     else:
+#         return str(number)
     
 
-# while True:
-#     ans=random.randint(1,100)
-#     res=fizz_buzz(ans)
-#     if res is False:
-#         print("lost")
-#         break
+# # while True:
+# #     ans=random.randint(1,100)
+# #     res=fizz_buzz(ans)
+# #     if res is False:
+# #         print("lost")
+# #         break
     
-#     ans=int(input("enter yours \n"))
-#     res=fizz_buzz(ans)
-#     if res is False:
-#         print(" you lost")
+# #     ans=int(input("enter yours \n"))
+# #     res=fizz_buzz(ans)
+# #     if res is False:
+# #         print(" you lost")
+# #         break
+
+# input("Press enter")
+# print()
+
+# next=0
+
+# while next<99:
+#     next+=1
+#     print(fizz_buzz(next))
+#     next+=1
+#     correct_answer=fizz_buzz(next)
+#     p1=input("Your move: \n")
+#     if p1 != correct_answer:
+#         print("{}".format(correct_answer))
 #         break
+# else:
+#     print("well done {}".format(next))    
 
-input("Press enter")
-print()
+# ---------------------------
 
-next=0
+a=input("")
 
-while next<99:
-    next+=1
-    print(fizz_buzz(next))
-    next+=1
-    correct_answer=fizz_buzz(next)
-    p1=input("enter yours \n")
-    if p1 != correct_answer:
-        print("{}".format(correct_answer))
-        break
-else:
-    print("well done {}".format(next))    
+aa=a.split()
+print(aa)

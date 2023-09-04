@@ -374,10 +374,3 @@
 
 # print(sum(1,2,3,4,5))        
 
-a=input("enter")
-aa=a.split(" ")
-sum=0
-for numbers in aa:
-    sum+=int(numbers)
-
-print(sum)    

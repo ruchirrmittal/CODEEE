@@ -115,44 +115,80 @@ available_parts = {'1': "computer",
 ############# SMART FRIDGE ########################
 
 
-from contents import pantry , recipes
+# from contents import pantry , recipes
 
 
-display={}
+# display={}
 
-for index,value in enumerate(recipes):
-    display[str(index+1)]=value
+# def adder(list,fo_it,q):
+#     # list[fo_it]=q
+#     # return listt
+#     # if fo_it in list:
+#     #     list[fo_it]+=q
+#     # else:
+#     #     list[fo_it]=q   
 
-while True:
-    print("Please choose a recipe:")
-    print("-"*10)
-
-    for key,value in display.items():
-        print(f"{key}: {value}")
-
-    choice=input("-:")  
-    if choice=='0':
-        break
-    elif choice in display:
-        selected=display[choice]
-        print(f"You have selected {selected}")
-        print()
-        print("checking ingredients....")
-        ingredients=recipes[selected]
-        for key in ingredients:
-            value=ingredients[key]
-            print(f"{value}") 
-        for food,qua in ingredients.items():
-            qua_p=pantry.get(food,0)
-            if qua<=qua_p:
-                print(f"{food} ok")
-            else:
-                quantitytobuy=qua-qua_p
-                print(f"{food} is not enough,get {quantitytobuy} more")    
-                
+#     list[fo_it]=list.setdefault(fo_it,0) + q 
 
 
-        
+# for index,value in enumerate(recipes):
+#     display[str(index+1)]=value
 
+# shopping_list={}
 
+# while True:
+    
+#     print("Please choose a recipe:")
+#     print("-"*10)
+
+#     for key,value in display.items():
+#         print(f"{key}: {value}")
+
+#     choice=input("-:")  
+#     if choice=='0':
+#         break
+#     elif choice in display:
+#         selected=display[choice]
+#         print(f"You have selected {selected}")
+#         print()
+#         print("checking ingredients....")
+#         ingredients=recipes[selected]
+#         for key in ingredients:
+#             # r1=ingredients[key]
+#             print(f"{key}") 
+#         for food,qua in ingredients.items():
+#             qua_p=pantry.get(food,0)
+#             if qua<=qua_p:
+#                 print(f"{food} ok")
+#             else:
+#                 quantitytobuy=qua-qua_p
+#                 print(f"{food} is not enough,get {quantitytobuy} more")
+#                 adder(shopping_list,food,quantitytobuy)
+
+# print(shopping_list)        
+
+# ---------------------------------------------
+# Dict methods
+#------------------------------------------------
+d = {
+    0: "zero",
+    1: "one",
+    2: "two",
+    3: "three",
+    4: "four",
+    5: "five",
+    6: "six",
+    7: "seven",
+    8: "eight",
+    9: "nine",
+}
+
+pantry_items = ['chicken', 'spam', 'egg', 'bread', 'lemon'] 
+
+# new_dict=dict.fromkeys(pantry_items,0) 
+# #Create a new dictionary with keys from iterable and values set to value
+# print(new_dict)
+
+keyss=d.keys()
+print(keyss)
       

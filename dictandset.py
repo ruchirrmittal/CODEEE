@@ -94,16 +94,65 @@ available_parts = {'1': "computer",
 
 #     choice=input(">")           
 
-choice="-"
-cart={}
-while choice !='0':
-    if choice in available_parts:
-        a=available_parts[choice]
-        print(f"adding {a}\n")
-        cart[choice]=available_parts[choice]
-        print(cart)
-    else:
-        for key,values in available_parts.items():
-            print(f"{key}:{values}")
+# choice="-"
+# cart={}
+# while choice !='0':
+#     if choice in available_parts:
+#         a=available_parts[choice]
+#         print(f"adding {a}\n")
+#         cart[choice]=available_parts[choice]
+#         print(cart)
+#     else:
+#         for key,values in available_parts.items():
+#             print(f"{key}:{values}")
 
-    choice=input(">")           
+#     choice=input(">")           
+
+
+# -------------------------------------------------------------
+
+# --------------------------------------------------------------
+############# SMART FRIDGE ########################
+
+
+from contents import pantry , recipes
+
+
+display={}
+
+for index,value in enumerate(recipes):
+    display[str(index+1)]=value
+
+while True:
+    print("Please choose a recipe:")
+    print("-"*10)
+
+    for key,value in display.items():
+        print(f"{key}: {value}")
+
+    choice=input("-:")  
+    if choice=='0':
+        break
+    elif choice in display:
+        selected=display[choice]
+        print(f"You have selected {selected}")
+        print()
+        print("checking ingredients....")
+        ingredients=recipes[selected]
+        for key in ingredients:
+            value=ingredients[key]
+            print(f"{value}") 
+        for food,qua in ingredients.items():
+            qua_p=pantry.get(food,0)
+            if qua<=qua_p:
+                print(f"{food} ok")
+            else:
+                quantitytobuy=qua-qua_p
+                print(f"{food} is not enough,get {quantitytobuy} more")    
+                
+
+
+        
+
+
+      

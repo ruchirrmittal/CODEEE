@@ -46,16 +46,16 @@
 
 
 # changing values 
-vehicles = {
-    'dream': 'Honda 250T',
-    'roadster': 'BMW R1100',
-    'er5': 'Kawasaki ER5',
-    'can-am': 'Bombardier Can-Am 250',
-    'virago': 'Yamaha XV250',
-    'tenere': 'Yamaha XT650',
-    'jimny': 'Suzuki Jimny 1.5',
-    'fiesta': 'Ford Fiesta Ghia 1.4',
-}
+# vehicles = {
+#     'dream': 'Honda 250T',
+#     'roadster': 'BMW R1100',
+#     'er5': 'Kawasaki ER5',
+#     'can-am': 'Bombardier Can-Am 250',
+#     'virago': 'Yamaha XV250',
+#     'tenere': 'Yamaha XT650',
+#     'jimny': 'Suzuki Jimny 1.5',
+#     'fiesta': 'Ford Fiesta Ghia 1.4',
+# }
 
 
 # vehicles['dream']="ice cream"
@@ -75,13 +75,13 @@ vehicles = {
 # --------------------------------------------------------------------------------------------------
 
 
-available_parts = {'1': "computer",
-                        '2': "monitor",
-                        '3': "keyboard",
-                        '4': "mouse",
-                        '5': "hdmi cable",
-                        '6': "dvd drive",
-                    }
+# available_parts = {'1': "computer",
+#                         '2': "monitor",
+#                         '3': "keyboard",
+#                         '4': "mouse",
+#                         '5': "hdmi cable",
+#                         '6': "dvd drive",
+#                     }
 
 # choice="-"
 # while choice !='0':
@@ -170,25 +170,79 @@ available_parts = {'1': "computer",
 # ---------------------------------------------
 # Dict methods
 #------------------------------------------------
-d = {
-    0: "zero",
-    1: "one",
-    2: "two",
-    3: "three",
-    4: "four",
-    5: "five",
-    6: "six",
-    7: "seven",
-    8: "eight",
-    9: "nine",
-}
+# d = {
+#     0: "zero",
+#     1: "one",
+#     2: "two",
+#     3: "three",
+#     4: "four",
+#     5: "five",
+#     6: "six",
+#     7: "seven",
+#     8: "eight",
+#     9: "nine",
+# }
 
-pantry_items = ['chicken', 'spam', 'egg', 'bread', 'lemon'] 
+# pantry_items = ['chicken', 'spam', 'egg', 'bread', 'lemon'] 
 
 # new_dict=dict.fromkeys(pantry_items,0) 
 # #Create a new dictionary with keys from iterable and values set to value
 # print(new_dict)
 
-keyss=d.keys()
-print(keyss)
-      
+# keyss=d.keys()
+# print(keyss)
+
+# v=d.values()
+# print(v) 
+# values=list(v)
+# print(values)
+
+# animals={'a':['cool','fun','awesome'],
+#          'b':['bad','bob','bongus'],
+#          'c':['cute','curly','cunt'],
+
+# }
+
+# print(animals['c'])
+# words=animals.copy()
+# print(words['c'])
+
+# words['c'].append("coco")
+
+# print(animals['c'])
+# print(words['c'])
+
+# dic1={'1':['one','two','three'],
+#       '2':['ek','do','teen',]}
+
+# dic2={}
+
+# key=dic1.keys()
+# print(key)
+# value=dic1.values()
+# print(value)
+
+# data=[('da','a'),
+#       ['aba','sns']]
+
+# print(ord("a"))
+
+# def sh(str):
+#     basic_hash=ord(str[0])
+#     return basic_hash%10
+
+# print(sh('a'))
+# -------------------------------------------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------------------------------------------------------
+
+
+
+# SETS
+
+import random
+
+a=random.randrange(2,10,2)
+print(a)

@@ -1,7 +1,5 @@
-parts=["a","b","c","d","e"]
+def sh(str):
+    basic_hash=ord(str[0])
+    return basic_hash%10
 
-valid_choices=[]
-
-for i in range(1,len(parts)+1):
-    valid_choices.append(i)
-print(valid_choices) 
+print(sh('a'))

@@ -242,7 +242,116 @@
 
 # SETS
 
-import random
+# num={*""}
+# num=set()
 
-a=random.randrange(2,10,2)
-print(a)
+# while len(num)<5:
+#     new=int(input("enter a number:  "))
+#     num.add(new)
+
+# print(num)
+
+
+# color=['blue','red','green','white','purple','blue','red','red']
+# uniq=set(color)
+# print(uniq)
+
+
+# uniq=list(dict.fromkeys(color))
+# print(uniq)
+# uniq=dict.fromkeys(color)
+# print(uniq)
+
+
+# difference between discard and remove
+# data=set(range(20))
+
+# print(data)
+
+# data.discard(11)
+# data.remove(10)
+# print(data)
+# print(data)
+
+# data.discard(30)
+
+# print(data)
+
+# data.remove(40)
+# print(data)
+
+# travel_mode = {"1": "car", "2": "plane"}
+
+# items = {
+#     "can opener",
+#     "fuel",
+#     "jumper",
+#     "knife",
+#     "matches",
+#     "razor blades",
+#     "razor",
+#     "scissors",
+#     "shampoo",
+#     "shaving cream",
+#     "shirts (3)",
+#     "shorts",
+#     "sleeping bag(s)",
+#     "soap",
+#     "socks (3 pairs)",
+#     "stove",
+#     "tent",
+#     "mug",
+#     "toothbrush",
+#     "toothpaste",
+#     "towel",
+#     "underwear (3 pairs)",
+#     "water carrier",
+# }
+
+# restricted_items = {
+#     "catapult",
+#     "fuel",
+#     "gun",
+#     "knife",
+#     "razor blades",
+#     "scissors",
+#     "shampoo",
+# }
+
+# print("Please choose your mode of travel:")
+# for key, value in travel_mode.items():
+#     print(f"{key}: {value}")
+#     # Python 3.5 and earlier
+#     # print("{}: {}".format(key, value))
+
+# mode = "-"
+# while mode not in travel_mode:
+#     mode = input("> ")
+
+# if mode == "2":
+#     # travelling by plane, remove restricted items
+#     for ri in restricted_items:
+#         if ri in items:
+#             items.discard(ri)
+
+
+
+# # print the packing list
+# print("You need to pack:")
+# for item in sorted(items):
+#     print(item)
+
+
+# from contents import *
+
+# for pat in patients:
+#     p=patients[pat]
+#     print(p)
+#     print(pat)
+
+
+set1={1,2,3,4,5}
+set2={6,7,1,2,3,4,5,8,9,10}
+# print(set1.union(set2)) #union
+
+

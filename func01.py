@@ -367,7 +367,7 @@
 
 # def sum(*args):
 #     result=0
-#     print(args)
+#     print(*args)
 #     for value in args:
 #         result+=value
 #     return result

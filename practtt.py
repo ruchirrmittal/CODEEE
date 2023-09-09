@@ -80,3 +80,10 @@ print(liss)
 #         list_length -= 1
 #     index += 1
 # print(data)
+
+lis1=[[(j*i) for j in range(4)] for i in range(4)]
+
+print(lis1)
+    
+
+  

@@ -1,19 +1,6 @@
-def rem_pr(str1,st2):
-    if str1.startswith(st2):
-        return str1[len(st2):]
-    else:
-        return str1
+table='tablee.txt'
 
-def rem_su(str1,st2):
-    if str1.endswith(st2):
-        return str1[:(len(str1)-len(st2))]
-    else:
-        return str1
-    
-n="my name is happy"
-pre="my"
-suf="happy"
-result1=rem_pr(n,pre)
-print(result1)
-result2=rem_su(n,suf)
-print(result2)
+with open(table,mode='w') as ta:
+    for i in range(3):
+        for j in range(1,10):
+            print(f"{i}x{j}={i*j}",file=ta)

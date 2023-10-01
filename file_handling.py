@@ -81,16 +81,146 @@
 
 # country file
 
-file='country_info.txt'
+# file='country_info.txt'
 
-with open(file) as f1:
-    f1_c=f1.readline()
+# with open(file) as f1:
+#     f1_c=f1.readline()
 
-    for rows in f1:
-        data=rows.strip('\n').split('|')
-        print(data)
+#     for rows in f1:
+#         data=rows.strip('\n').split('|')
+#         print(data)
 
-headers=f1_c.strip('\n').split('|')
-print(headers)
+# headers=f1_c.strip('\n').split('|')
+# print(headers)
 
-       
+#---------------------
+
+# file='country_info.txt'
+# countries={}
+# with open(file) as f1:
+#     f1.readline()
+#     for rows in f1:
+#         data=rows.strip('\n').split('|')
+#         country,capital,code,code3,dialing,timezone,currency=data
+#         country_dict={
+#             'Country':country,
+#             'Capital':capital,
+#             'Code':code,
+#             'Code3':code3,
+#             'Dialing':dialing,
+#             'Timezone':timezone,
+#             'Currency':currency
+#         }
+        
+#         countries[country.casefold()]=country_dict
+        
+        
+
+
+# while True:    
+#     Name=input("Enter the name of the country \n").casefold()
+
+#     if Name in countries:
+#         A1=countries[Name]['Capital']
+#         print(f"The Capital of {Name} is {A1}")
+#     else:
+#         print("Invalid")
+#         break
+
+
+
+data = [
+    "Andromeda - Shrub",
+    "Bellflower - Flower",
+    "China Pink - Flower",
+    "Daffodil - Flower",
+    "Evening Primrose - Flower",
+    "French Marigold - Flower",
+    "Hydrangea - Shrub",
+    "Iris - Flower",
+    "Japanese Camellia - Shrub",
+    "Lavender - Shrub",
+    "Lilac- Shrub",
+    "Magnolia - Shrub",
+    "Peony - Shrub",
+    "Queen Anne's Lace - Flower",
+    "Red Hot Poker - Flower",
+    "Snapdragon - Flower",
+    "Sunflower - Flower",
+    "Tiger Lily - Flower",
+    "Witch Hazel - Shrub",
+]
+
+# plants_file="plants_file.txt"
+
+# with open(plants_file,mode='w') as f:
+#     for plant in data:
+#         print(plant,file=f)
+
+
+# with open(plants_file) as f:
+#     for plant in f:
+#         print(plant.rstrip())
+
+# write method
+
+# flowers='flowers.txt'
+
+# with open(flowers,mode='w') as fi:
+#     for plant in data:
+#         fi.write(f"{plant} \n")
+
+# table='tablee.txt'
+
+# with open(table,mode='w') as ta:
+#     for i in range(1,4):
+#         for j in range(1,11):
+#    ta.write(f"{i}x{j}={i*j}\n") #write argument must be a string
+
+#         print((),file=ta)    
+
+# encoding-> utf-8
+
+# with open('Jabberwocky.txt',encoding='utf-8') as f:
+#     for lines in f:
+#         print(lines.rstrip())
+
+# ////////////////////////////////////////
+
+# JSON
+
+# import json
+
+# languages = [
+#     ['ABC', 1987],
+#     ['Algol 68', 1968],
+#     ['APL', 1962],
+#     ['C', 1973],
+#     ['Haskell', 1990],
+#     ['Lisp', 1958],
+#     ['Modula-2', 1977],
+#     ['Perl', 1987],
+# ]
+
+# with open('test.json','w',encoding='UTF-8') as testfile:
+#     json.dump(languages,testfile)
+
+# with open('test.json','r',encoding='UTF-8') as f:
+#     data=json.load(f)
+#     print(data)
+
+# parsing json file
+
+import json
+
+anomal='data.json'
+
+with open(anomal,'r',encoding="UTF-8") as jf:
+    d=json.load(jf)
+
+
+# print(d['description'])
+
+for year,value in d['data'].items():
+    year,value=int(year),float(value)
+    print(f"YEAR: {year}  {value:6.2f}")

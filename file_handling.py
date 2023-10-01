@@ -211,16 +211,55 @@ data = [
 
 # parsing json file
 
-import json
+# import json
 
-anomal='data.json'
+# anomal='data.json'
 
-with open(anomal,'r',encoding="UTF-8") as jf:
-    d=json.load(jf)
+# with open(anomal,'r',encoding="UTF-8") as jf:
+#     d=json.load(jf)
+
+
+# # print(d['description'])
+
+# for year,value in d['data'].items():
+#     year,value=int(year),float(value)
+#     print(f"YEAR: {year}  {value:6.2f}")
+
+# import json
+# import urllib.request
+
+# anomal='https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global/time-series/globe/land_ocean/1/10/1880-2022.json'
+
+# with urllib.request.urlopen(anomal) as json_data:
+#     file=json_data.read().decode('UTF-8')
+#     d=json.loads(file)
 
 
 # print(d['description'])
 
-for year,value in d['data'].items():
-    year,value=int(year),float(value)
-    print(f"YEAR: {year}  {value:6.2f}")
+# for year,value in d['data'].items():
+#     year,value=int(year),float(value)
+#     print(f"YEAR: {year}  {value:6.2f}")
+
+
+# CSV FILE
+
+# import csv
+
+# csv_file='OlympicMedals_2020.csv'
+
+# with open(csv_file,encoding='utf-8',newline='') as medals:
+#     headers=medals.readline().strip('\n').split(',')
+#     reader=csv.reader(medals)
+#     for row in reader:
+#         print(row)
+
+
+import csv
+
+cereals='cereal_grains.csv'
+
+with open(cereals,encoding='utf-8') as cereals_file:
+    data=csv.reader(cereals_file,quoting=csv.QUOTE_NONNUMERIC)
+    for row in data:
+        print(row)

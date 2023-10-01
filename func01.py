@@ -27,24 +27,24 @@
 # --------------------------------------------------
 
 
-# def is_pal(sen):
-#     sen1=""
+def is_pal(sen):
+    sen1=""
 
-#     for char in sen:
-#         if char.isalnum():
-#             sen1+=char
+    for char in sen:
+        if char.isalnum():
+            sen1+=char
     
-#     print(sen1)        
-#     return sen1.casefold()[::-1]==sen1.casefold() 
+    print(sen1)        
+    return sen1.casefold()[::-1]==sen1.casefold() 
 
 
-# sent=input("Enter a sen \n")
-# ans=is_pal(sent)
-# print(ans)
-# if ans is True:
-#     print("yes it is")
-# else:
-#     print("its not")    
+sent=input("Enter a sen \n")
+ans=is_pal(sent)
+print(ans)
+if ans is True:
+    print("yes it is")
+else:
+    print("its not")    
 # ------------------------------------
 
 
@@ -129,24 +129,24 @@
 # ***FIBONACCI***
 
 
-# def fib(n):
+def fib(n):
 
-#     if 0<=n<=1:
-#         return n
+    if 0<=n<=1:
+        return n
     
-#     n1,n2=1,0
+    n1,n2=1,0
 
-#     result=None
+    result=None
 
-#     for i in range(n-1):
-#         result=n1+n2
-#         n2=n1
-#         n1=result
+    for i in range(n-1):
+        result=n1+n2
+        n2=n1
+        n1=result
 
-#     return result
+    return result
 
-# for i in range(20):
-#     print(i,fib(i))
+for i in range(20):
+    print(i,fib(i))
 # ------------------------------------------------
 
 # def add(a,b: int) ->bool:
@@ -345,32 +345,32 @@
 # ------------------------
 
 
-# number=(1,4,2,4,2,3)
+number=(1,4,2,4,2,3)
 
-# print(number)
-# print(*number)
+print(number)
+print(*number)
 
-# for i in number:
-#     print(i)
+for i in number:
+    print(i)
 
-# def a(arg):
-#     print(arg)
-#     print(*arg)
+def a(arg):
+    print(arg)
+    print(*arg)
 
-#     for i in arg:
-#         print(i)
+    for i in arg:
+        print(i)
 
-# a(number)
+a(number)
 # a(1,4,2,4,2,3)
-# a((1,4,2,4,2,3))
+a((1,4,2,4,2,3))
 
 
-# def sum(*args):
-#     result=0
-#     print(*args)
-#     for value in args:
-#         result+=value
-#     return result
+def sum(*args):
+    result=0
+    print(*args)
+    for value in args:
+        result+=value
+    return result
 
-# print(sum(1,2,3,4,5))        
+print(sum(1,2,3,4,5))        
 

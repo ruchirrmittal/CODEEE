@@ -68,7 +68,7 @@
 #         return str1[:(len(str1)-len(st2))]
 #     else:
 #         return str1
-    
+	
 # n="my name is happy"
 # pre="my"
 # suf="happy"
@@ -111,10 +111,10 @@
 #             'Timezone':timezone,
 #             'Currency':currency
 #         }
-        
+		
 #         countries[country.casefold()]=country_dict
-        
-        
+		
+		
 
 
 # while True:    
@@ -130,25 +130,25 @@
 
 
 data = [
-    "Andromeda - Shrub",
-    "Bellflower - Flower",
-    "China Pink - Flower",
-    "Daffodil - Flower",
-    "Evening Primrose - Flower",
-    "French Marigold - Flower",
-    "Hydrangea - Shrub",
-    "Iris - Flower",
-    "Japanese Camellia - Shrub",
-    "Lavender - Shrub",
-    "Lilac- Shrub",
-    "Magnolia - Shrub",
-    "Peony - Shrub",
-    "Queen Anne's Lace - Flower",
-    "Red Hot Poker - Flower",
-    "Snapdragon - Flower",
-    "Sunflower - Flower",
-    "Tiger Lily - Flower",
-    "Witch Hazel - Shrub",
+	"Andromeda - Shrub",
+	"Bellflower - Flower",
+	"China Pink - Flower",
+	"Daffodil - Flower",
+	"Evening Primrose - Flower",
+	"French Marigold - Flower",
+	"Hydrangea - Shrub",
+	"Iris - Flower",
+	"Japanese Camellia - Shrub",
+	"Lavender - Shrub",
+	"Lilac- Shrub",
+	"Magnolia - Shrub",
+	"Peony - Shrub",
+	"Queen Anne's Lace - Flower",
+	"Red Hot Poker - Flower",
+	"Snapdragon - Flower",
+	"Sunflower - Flower",
+	"Tiger Lily - Flower",
+	"Witch Hazel - Shrub",
 ]
 
 # plants_file="plants_file.txt"
@@ -292,7 +292,7 @@ data = [
 #     sample=country_file.read()
 #     country_dialect=csv.Sniffer().sniff(sample)
 #     country_file.seek(0)  #this is used because in line 292 the file is completely read until the end and it sends the cursor back to the start
-    
+	
 #     country_data=csv.reader(country_file,dialect=country_dialect)
 #     for row in country_data:
 #         print(row)
@@ -373,7 +373,7 @@ data = [
 #     reader=csv.DictReader(data,dialect=co_dialect)
 #     for row in reader:
 #         countries[row['Country'].casefold()]=row
-        
+		
 # while True:    
 #     Name=input("Enter the name of the country \n").casefold()
 
@@ -416,6 +416,9 @@ data = [
 #     print('medals_table = [', file=output_file)
 
 #     reader = csv.DictReader(data)
+#     for row in reader:
+#         print(row)
+
 #     # Read each row from the CSV file, as a dictionary,
 #     # and produce a new dictionary containing the key/value
 #     # pairs we want, in the order we want.
@@ -428,6 +431,7 @@ data = [
 #             if value.isnumeric():
 #                 value = int(value)
 #             new_dict[key.casefold()] = value
+			
 
 #         # print the dictionary to the output file
 #         # (indented by 4 spaces, with a trailing comma).
@@ -443,5 +447,42 @@ data = [
 # open medals_dict.py
 
 # zip function
+
+albums = [("Welcome to my Nightmare", "Alice Cooper", 1975),
+		  ("Bad Company", "Bad Company", 1974),
+		  ("Nightflight", "Budgie", 1981),
+		  ("More Mayhem", "Imelda May", 2011),
+		  ("Ride the Lightning", "Metallica", 1984),
+		  ]
+
+keys=['album','artist','year']
+
+# for row in albums:
+#     zip_object=zip(keys,row)
+#     print(zip_object)
+#     for item in zip(keys,row):
+#         print(f"\t {item} ")
+
+# for row in albums:
+#     zip_object=zip(keys,row)
+#     albums_dict=dict(zip_object)
+#     print(albums_dict)
+
+
+# import csv
+
+# output_album='album_dict.csv'
+
+# with open(output_album,'w',encoding='utf-8',newline='') as data:
+#     writer=csv.DictWriter(data,fieldnames=keys)
+#     writer.writeheader()
+
+#	  for row in albums:
+#         zip_object=zip(keys,row)
+#         albums_dict=dict(zip_object)
+#         writer.writerow(albums_dict)
+
+
+
 
 

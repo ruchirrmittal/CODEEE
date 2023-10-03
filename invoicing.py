@@ -56,28 +56,50 @@ def record_invoice(invoice_file: TextIO,
     :param company: The name of the company being invoiced.
     :param amount: The amount of the invoice.
     """
+    last_row=""
+    for line in invoice_file:
+        print('*')#delete after testing
+        last_row=line
 
-
-# Test code:
-current_year = get_year()
-test_data = [
-    ('2019-0005', (2019, 5), f'{current_year}-0001'),
-    (f'{current_year}-8514', (current_year, 8514), f'{current_year}-8515'),
-    (f'{current_year}-0001', (current_year, 1), f'{current_year}-0002'),
-    (f'{current_year}-0023', (current_year, 23), f'{current_year}-0024'),
-]
-
-for test_string, result, next_number in test_data:
-    parts = parse_invoice_number(test_string)
-    if parts == result:
-        print(f'{test_string} parsed successfully')
+    if last_row:
+        invoice_number=last_row.split('\t')[0]
+        new_invoice_number=next_invoice_number(invoice_number)
     else:
-        print(f'{test_string} failed to parse. Expected {result} got {parts}')
+        # if the file is empty then
+        year=get_year()
+        new_invoice_number=f'{year}-{1:04d}'
+    
+    print(f'{new_invoice_number}\t{company} \t {amount}',file=invoice_file)
+    invoice_file.seek(0)
 
-    new_number = next_invoice_number(test_string)
-    if next_number == new_number:
-        print(f'New number {new_number} generated correctly for {test_string}')
-    else:
-        print(f'New number {new_number} is not correct for {test_string}')
 
-    print('-' * 80)
+
+# # Test code:
+# current_year = get_year()
+# test_data = [
+#     ('2019-0005', (2019, 5), f'{current_year}-0001'),
+#     (f'{current_year}-8514', (current_year, 8514), f'{current_year}-8515'),
+#     (f'{current_year}-0001', (current_year, 1), f'{current_year}-0002'),
+#     (f'{current_year}-0023', (current_year, 23), f'{current_year}-0024'),
+# ]
+
+# for test_string, result, next_number in test_data:
+#     parts = parse_invoice_number(test_string)
+#     if parts == result:
+#         print(f'{test_string} parsed successfully')
+#     else:
+#         print(f'{test_string} failed to parse. Expected {result} got {parts}')
+
+#     new_number = next_invoice_number(test_string)
+#     if next_number == new_number:
+#         print(f'New number {new_number} generated correctly for {test_string}')
+#     else:
+#         print(f'New number {new_number} is not correct for {test_string}')
+
+#     print('-' * 80)
+
+invoice='invoices.csv'
+
+with open(invoice,'r+') as invoices:
+    record_invoice(invoices,'ACME Roadrunner',223.2)
+    record_invoice(invoices,'ruchir',22)

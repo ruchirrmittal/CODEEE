@@ -70,7 +70,7 @@ def record_invoice(invoice_file: TextIO,
         new_invoice_number=f'{year}-{1:04d}'
     
     print(f'{new_invoice_number}\t{company} \t {amount}',file=invoice_file)
-    invoice_file.seek(0)
+    
 
 
 

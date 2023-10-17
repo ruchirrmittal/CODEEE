@@ -106,3 +106,35 @@ import time
 
 # *************************************************************************************
 
+
+# import time
+
+# print("The epoch of time is" + time.strftime('%c',time.gmtime(0)))
+
+# print("the current timezone of {0} is {1}".format(time.tzname[0],time.timezone))
+
+# if time.daylight!= 0:
+#     print("Daylight saving is in effect")
+
+# ________________________________________________________________________
+
+# datetime
+
+# import datetime
+
+# print(datetime.datetime.today())
+# print(datetime.datetime.now())
+# print(datetime.datetime.utcnow())
+
+# ___________________________________________________________
+# pytz module
+# -------------------------------------------------------------
+
+import pytz
+import datetime
+
+country='Asia/Kolkata'
+
+tz_to_display=pytz.timezone(country)
+local_time=datetime.datetime.now(tz=tz_to_display)
+print("the time in {} is {}".format(country,local_time))

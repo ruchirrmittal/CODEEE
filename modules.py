@@ -130,11 +130,21 @@ import time
 # pytz module
 # -------------------------------------------------------------
 
-import pytz
-import datetime
+# import pytz
+# import datetime
 
-country='Asia/Kolkata'
+# country='Asia/Kolkata'
 
-tz_to_display=pytz.timezone(country)
-local_time=datetime.datetime.now(tz=tz_to_display)
-print("the time in {} is {}".format(country,local_time))
+# tz_to_display=pytz.timezone(country)
+# local_time=datetime.datetime.now(tz=tz_to_display)
+# print("the time in {} is {}".format(country,local_time))
+
+# ______________________________________________________________________________
+# ______________________________________________________________________________
+# ______________________________________________________________________________
+
+
+
+# Tkinter
+
+

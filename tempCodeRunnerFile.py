@@ -1,21 +1,21 @@
-from datetime import datetime, timezone
-try:
-    import zoneinfo
-except ImportError:
-    from backports import zoneinfo
+import tkinter
 
-zones=(
-    'Europe/Paris',
-    'Europe/London',
-    'Asia/Hong_Kong',
-    'Africa/Nairobi'
-)
 
-utc_now=datetime.now(tz=timezone.utc)
+prog=tkinter.Tk()
 
-for zone in zones:
-    tz=zoneinfo.ZoneInfo(zone)
-    required=datetime.now(tz=tz)
-    # required=utc_now.astimezone(tz)
-    city=zone.split('/')[-1]
-    print(f'The time in {city} is {required}')
+prog.title("this_is_something")
+prog.geometry("360x360")
+
+label1=tkinter.Label(prog,text="Enter your name")
+label1.grid(row=1,column=1)
+
+label2=tkinter.Label(prog,text=" ")
+label2.grid(row=2,column=1)
+
+name=tkinter.Entry(prog)
+name.pack()
+
+button1=tkinter.Button(prog,text="click me")
+button1.grid(row=3,column=1)
+
+prog.mainloop()

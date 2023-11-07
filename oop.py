@@ -16,54 +16,54 @@
 
 # constructor __init__
 
-class Item:
-    pay_rate=0.8 #class attribute
-    all=[]
+# class Item:
+#     pay_rate=0.8 #class attribute
+#     all=[]
 
-    def __init__(self,name : str,price : float,quantity = 0):
+#     def __init__(self,name : str,price : float,quantity = 0):
         
-        print(f'instance is created {name}')
+#         print(f'instance is created {name}')
         
-        # assert
-        assert price >= 0, f"Price {price} is not greater than zero"
-        assert quantity >=0, f"Quantity {quantity} is not greater than zero"
+#         # assert
+#         assert price >= 0, f"Price {price} is not greater than zero"
+#         assert quantity >=0, f"Quantity {quantity} is not greater than zero"
 
-        self.name=name
-        self.price=price
-        self.quantity=quantity
+#         self.name=name
+#         self.price=price
+#         self.quantity=quantity
 
-        Item.all.append(self)
+#         Item.all.append(self)
  
-    def calc(self):
-        return self.price*self.quantity
+#     def calc(self):
+#         return self.price*self.quantity
     
-    def discount(self):
-        self.price = self.price * self.pay_rate
+#     def discount(self):
+#         self.price = self.price * self.pay_rate
     
-    def __repr__(self):
-        return f"Item({self.name},{self.price},{self.quantity})"
+#     def __repr__(self):
+#         return f"Item({self.name},{self.price},{self.quantity})"
     
-    @classmethod
-    def change_payrate(cls,amount):
-        cls.pay_rate=amount
+#     @classmethod
+#     def change_payrate(cls,amount):
+#         cls.pay_rate=amount
 
-    @classmethod
-    def from_str(cls,emp_str):
-        name,price,quantity=emp_str.split("-")
-        return cls(name,price,quantity)
+#     @classmethod
+#     def from_str(cls,emp_str):
+#         name,price,quantity=emp_str.split("-")
+#         return cls(name,price,quantity)
 
 
-item1=Item("Phone",100,5)
-item2=Item("laptop",1000,3)
-item3=Item("cable",10,5)
-item4=Item("Mouse",50,5)
-item5=Item("KEyboard",75,5)
+# item1=Item("Phone",100,5)
+# item2=Item("laptop",1000,3)
+# item3=Item("cable",10,5)
+# item4=Item("Mouse",50,5)
+# item5=Item("KEyboard",75,5)
 
-print(item1.price)
-print(item1.pay_rate)
-Item.change_payrate(1)
-item1.discount()
-print(item1.price)
+# print(item1.price)
+# print(item1.pay_rate)
+# Item.change_payrate(1)
+# item1.discount()
+# print(item1.price)
 
 # print(Item.all)
 # for instances in Item.all:
@@ -81,6 +81,30 @@ print(item1.price)
 
 # _______________________________________________________
 # _______________________________________________________
+# _______________________________________________________
+
+# Decorators
+
+# def greet(fx):
+#     def mfx(*args,**kwargs):
+#         print("good morning")
+#         fx(*args,**kwargs)
+#         print("Thanks for using this function")
+        
+#     return mfx
+
+# @greet
+# def hello():
+#     print("Hello World")
+
+# hello()
+
+
+# _______________________________________________________
+# _______________________________________________________
+
+
+
 # _______________________________________________________
 # _______________________________________________________
 
@@ -146,5 +170,81 @@ if __name__=="__main__":
 # _____________________________________________________________
 # _____________________________________________________________
 
-class songs:
+# class Song:
+
+#     def __init__(self,title,artist,duration=0):
+#         self.title=title
+#         self.artist=artist
+#         self.duration=duration
+
+
+# help(songs)
+# print(songs.__doc__)
+
+
+# class album:
+
+#     def __init__(self,name,year,artist=None):
+#         self.name=name
+#         self.year=year
+#         if artist is None:
+#             self.artist=Artist("Various Artist")
+#         else:
+#             self.artist=artist
+
+#         self.tracks=[]
+
+#     def add_song(self,song,position=None):
+#         if position is None:
+#             self.tracks.append(song)
+#         else:
+#             self.tracks.insert(position,song)
+
+# class Artist:
+
+#     def __init__(self,name):
+#         self.name=name
+#         self.albums=[]
+
+#     def add_albums(self,album):
+#         self.albums.append(album)
+        
+# def load_data():
+#     new_album=None
+#     new_artist=None
+#     artist_list=[]
+
+#     with open('albums.txt','r') as albums:
+#         for line in albums:
+#             artist_f,album_f,year_f,song_f=tuple(line.strip('\n').split('\t'))
+#             year_f=int(year_f)
+#             print("{}:{}:{}:{}".format(artist_f,album_f,year_f,song_f))
+
+#             if new_artist is None:
+#                 new_artist=Artist(artist_f)
+#             elif new_artist.name!=artist_f:
+#                 new_artist.add_albums(new_album)
+#                 artist_list.append(new_artist)
+#                 new_artist=Artist(artist_f)
+#                 new_album=None
+
+#             if new_album is None:
+#                 new_album=album(album_f,year_f,new_artist)
+#             elif new_album.name != album_f:
+#                 new_artist.add_albums(new_album)
+#                 new_album=album(album_f,year_f,new_artist)
+
+#             new_song=Song(song_f,new_artist)
+#             new_album.add_song(new_song)
+        
+#         if new_artist is not None:
+#             if new_album is not None:
+#                 new_artist.add_albums(new_album)
+#             artist_list.append(new_artist)
     
+#     return artist_list
+
+
+# if __name__=="__main__":
+#     artists= load_data()
+#     print("There are {} artists".format(len(artists)))

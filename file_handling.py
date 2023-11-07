@@ -13,7 +13,7 @@
 
 # with open('Jabberwocky.txt','r') as f1:
 #     f2=f1.read()
-
+# string
 # print(type(f2))
 
 # for char in f2:
@@ -21,7 +21,7 @@
 
 # with open('Jabberwocky.txt','r') as f1:
 #     f2=f1.readlines()
-
+# gives list
 # print(type(f2))
 
 # for lines in f2:
@@ -448,20 +448,20 @@ data = [
 
 # zip function
 
-albums = [("Welcome to my Nightmare", "Alice Cooper", 1975),
-		  ("Bad Company", "Bad Company", 1974),
-		  ("Nightflight", "Budgie", 1981),
-		  ("More Mayhem", "Imelda May", 2011),
-		  ("Ride the Lightning", "Metallica", 1984),
-		  ]
+# albums = [("Welcome to my Nightmare", "Alice Cooper", 1975),
+# 		  ("Bad Company", "Bad Company", 1974),
+# 		  ("Nightflight", "Budgie", 1981),
+# 		  ("More Mayhem", "Imelda May", 2011),
+# 		  ("Ride the Lightning", "Metallica", 1984),
+# 		  ]
 
-keys=['album','artist','year']
+# keys=['album','artist','year']
 
-# for row in albums:
-#     zip_object=zip(keys,row)
-#     print(zip_object)
-#     for item in zip(keys,row):
-#         print(f"\t {item} ")
+# # for row in albums:
+# #     zip_object=zip(keys,row)
+# #     print(zip_object)
+# #     for item in zip(keys,row):
+# #         print(f"\t {item} ")
 
 # for row in albums:
 #     zip_object=zip(keys,row)

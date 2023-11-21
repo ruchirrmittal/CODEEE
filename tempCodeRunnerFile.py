@@ -1,13 +1,23 @@
-def load_data():
-    new_album=None
-    new_artist=None
-    artist_list=[]
+class player:
 
-    with open('albums.txt','r') as albums:
-        for line in albums:
-            artist_f,album_f,year_f,song_f=tuple(line.strip('\n').split('\t'))
-            year_f=int(year_f)
-            print(artist_f,album_f,year_f,song_f)
+    def __init__(self,name):
+        self.name=name
+        self._lives=3
+        self.level=1
+        self.score=0
 
-if __name__=="__main":
-    load_data()
+    def get_lives(self):
+        return self._lives
+    
+    def set_lives(self,value):
+        self._lives=value
+
+    lives=property(get_lives,set_lives)
+
+# watch vid 352
+p1=player("tim")
+print(p1.name)
+print(p1.score)
+print(p1.lives)
+p1.lives +=1
+print(p1.lives)

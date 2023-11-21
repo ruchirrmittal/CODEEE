@@ -87,19 +87,19 @@
 
 # def greet(fx):
 #     def mfx(*args,**kwargs):
-#         print("good morning")
+#         print("Hello user")
 #         fx(*args,**kwargs)
-#         print("Thanks for using this function")
-        
+#         print("Scared huh?")
 #     return mfx
 
+# # @greet
+# # def name():
+# #     a=input("Enter your name")
+# #     print(a)
+
 # @greet
-# def hello():
-#     print("Hello World")
-
-# hello()
-
-
+# def add(a,b):
+#     print(a+b)
 # _______________________________________________________
 # _______________________________________________________
 
@@ -178,8 +178,8 @@ if __name__=="__main__":
 #         self.duration=duration
 
 
-# help(songs)
-# print(songs.__doc__)
+# # help(songs)
+# # print(songs.__doc__)
 
 
 # class album:
@@ -208,7 +208,15 @@ if __name__=="__main__":
 
 #     def add_albums(self,album):
 #         self.albums.append(album)
-        
+
+
+# def find_object(field,object_list):
+
+#     for items in object_list:
+#         if items.name == field:
+#             return items
+#     return None 
+
 # def load_data():
 #     new_album=None
 #     new_artist=None
@@ -218,33 +226,275 @@ if __name__=="__main__":
 #         for line in albums:
 #             artist_f,album_f,year_f,song_f=tuple(line.strip('\n').split('\t'))
 #             year_f=int(year_f)
-#             print("{}:{}:{}:{}".format(artist_f,album_f,year_f,song_f))
+#             # print("{}:{}:{}:{}".format(artist_f,album_f,year_f,song_f))
 
 #             if new_artist is None:
 #                 new_artist=Artist(artist_f)
-#             elif new_artist.name!=artist_f:
-#                 new_artist.add_albums(new_album)
 #                 artist_list.append(new_artist)
-#                 new_artist=Artist(artist_f)
+#             elif new_artist.name!=artist_f:
+#                 #watch video 346 at 3:30 to understand and 348 too
+#                 new_artist=find_object(artist_f,artist_list)
+#                 if new_artist is None:
+#                     new_artist=Artist(artist_f)
+#                     artist_list.append(new_artist)
 #                 new_album=None
 
 #             if new_album is None:
 #                 new_album=album(album_f,year_f,new_artist)
-#             elif new_album.name != album_f:
 #                 new_artist.add_albums(new_album)
-#                 new_album=album(album_f,year_f,new_artist)
+#             elif new_album.name != album_f:
+#                 new_album=find_object(album_f,new_artist.albums)
+#                 if new_album is None:
+#                     new_album=album(album_f,year_f,new_artist)
+#                     new_artist.add_albums(new_album)
 
 #             new_song=Song(song_f,new_artist)
 #             new_album.add_song(new_song)
         
-#         if new_artist is not None:
-#             if new_album is not None:
-#                 new_artist.add_albums(new_album)
-#             artist_list.append(new_artist)
-    
 #     return artist_list
 
+# def create_checkfile(artist_list):
+    
+#     with open("Checkfile.txt","w") as checkfile:
+#         for new_artist in artist_list:
+#             for new_album in new_artist.albums:
+#                 for new_song in new_album.tracks:
+#                     print("{0.name}\t{1.name}\t{1.year}\t{2.title}".format(new_artist,new_album,new_song),file=checkfile)
 
 # if __name__=="__main__":
 #     artists= load_data()
 #     print("There are {} artists".format(len(artists)))
+#     create_checkfile(artists)
+
+
+# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\\\
+
+
+# class Song:
+
+#     def __init__(self,title,artist,duration=0):
+#         self.name=title
+#         self.artist=artist
+#         self.duration=duration
+
+
+# # help(songs)
+# # print(songs.__doc__)
+
+
+# class Album:
+
+#     def __init__(self,name,year,artist=None):
+#         self.name=name
+#         self.year=year
+#         if artist is None:
+#             self.artist=Artist("Various Artist")
+#         else:
+#             self.artist=artist
+
+#         self.tracks=[]
+
+#     def add_song(self,song,position=None):
+        
+#         song_found=find_object(song , self.tracks)
+#         if song_found is None:
+#             song_found=Song(song,self.artist)
+#             if position is None:
+#                 self.tracks.append(song_found)
+#             else:
+#                 self.tracks.insert(position,song_found)
+
+# class Artist:
+
+#     def __init__(self,name):
+#         self.name=name
+#         self.albums=[]
+
+#     def add_albums(self,album):
+#         self.albums.append(album)
+
+#     def add_song(self,name,year,title):
+#         album_found=find_object(name,self.albums)
+#         if album_found is None:
+#             print(name + "not found")
+#             album_found=Album(name,year,self)
+#             self.add_albums(album_found)
+#         else:
+#             print("album found")
+        
+#         album_found.add_song(title)
+
+
+
+# def find_object(field,object_list):
+
+#     for item in object_list:
+#         if item.name == field:
+#             return item
+#     return None 
+
+# def load_data():
+
+#     artist_list=[]
+
+#     with open('albums.txt','r') as albums:
+#         for line in albums:
+#             artist_f,album_f,year_f,song_f=tuple(line.strip('\n').split('\t'))
+#             year_f=int(year_f)
+#             # print("{}:{}:{}:{}".format(artist_f,album_f,year_f,song_f))
+
+#             new_artist=find_object(artist_f,artist_list)
+#             if new_artist is None:
+#                 new_artist=Artist(artist_f)
+#                 artist_list.append(new_artist)
+            
+#             new_artist.add_song(album_f,year_f,song_f)
+            
+#     return artist_list
+
+# def create_checkfile(artist_list):
+    
+#     with open("Checkfile.txt","w") as checkfile:
+#         for new_artist in artist_list:
+#             for new_album in new_artist.albums:
+#                 for new_song in new_album.tracks:
+#                     print("{0.name}\t{1.name}\t{1.year}\t{2.name}".format(new_artist,new_album,new_song),file=checkfile)
+
+# if __name__=="__main__":
+#     artists= load_data()
+#     print("There are {} artists".format(len(artists)))
+#     create_checkfile(artists)
+
+# ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| 
+
+# getters and setter
+
+class player:
+
+    def __init__(self,name):
+        self.name=name
+        self._lives=3
+        self.level=1
+        self.score=0
+
+    def get_lives(self):
+        return self._lives
+    
+    def set_lives(self,value):
+        self._lives=value
+
+    lives=property(get_lives,set_lives)
+
+# watch vid 352
+p1=player("tim")
+print(p1.name)
+print(p1.score)
+print(p1.lives)
+p1.lives +=1
+print(p1.lives)
+
+# 
+# 
+#  ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+# class Song:
+
+#     def __init__(self,title,artist,duration=0):
+#         self.title=title
+#         self.artist=artist
+#         self.duration=duration
+
+#     def get_title(self):
+#         return self.title
+    
+#     name=property(get_title)
+
+# # help(songs)
+# # print(songs.__doc__)
+
+
+# class Album:
+
+#     def __init__(self,name,year,artist=None):
+#         self.name=name
+#         self.year=year
+#         if artist is None:
+#             self.artist="Various Artist"
+#         else:
+#             self.artist=artist
+
+#         self.tracks=[]
+
+#     def add_song(self,song,position=None):
+        
+#         song_found=find_object(song , self.tracks)
+#         if song_found is None:
+#             song_found=Song(song,self.artist)
+#             if position is None:
+#                 self.tracks.append(song_found)
+#             else:
+#                 self.tracks.insert(position,song_found)
+
+# class Artist:
+
+#     def __init__(self,name):
+#         self.name=name
+#         self.albums=[]
+
+#     def add_albums(self,album):
+#         self.albums.append(album)
+
+#     def add_song(self,name,year,title):
+#         album_found=find_object(name,self.albums)
+#         if album_found is None:
+#             print(name + "not found")
+#             album_found=Album(name,year,self.name)
+#             self.add_albums(album_found)
+#         else:
+#             print("album found")
+        
+#         album_found.add_song(title)
+
+
+
+# def find_object(field,object_list):
+
+#     for item in object_list:
+#         if item.name == field:
+#             return item
+#     return None 
+
+# def load_data():
+
+#     artist_list=[]
+
+#     with open('albums.txt','r') as albums:
+#         for line in albums:
+#             artist_f,album_f,year_f,song_f=tuple(line.strip('\n').split('\t'))
+#             year_f=int(year_f)
+#             # print("{}:{}:{}:{}".format(artist_f,album_f,year_f,song_f))
+
+#             new_artist=find_object(artist_f,artist_list)
+#             if new_artist is None:
+#                 new_artist=Artist(artist_f)
+#                 artist_list.append(new_artist)
+            
+#             new_artist.add_song(album_f,year_f,song_f)
+            
+#     return artist_list
+
+# def create_checkfile(artist_list):
+    
+#     with open("Checkfile.txt","w") as checkfile:
+#         for new_artist in artist_list:
+#             for new_album in new_artist.albums:
+#                 for new_song in new_album.tracks:
+#                     print("{0.name}\t{1.name}\t{1.year}\t{2.title}".format(new_artist,new_album,new_song),file=checkfile)
+
+# if __name__=="__main__":
+#     artists= load_data()
+#     print("There are {} artists".format(len(artists)))
+#     create_checkfile(artists)

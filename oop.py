@@ -547,6 +547,39 @@ if __name__=="__main__":
 #     def __str__(self) -> str:
 #         return f"Name:{self.name} Lives:{self._lives} Level: {self._level} Score:{self._score}"
 
+# _______________________________________________________________________________-
+# _______________________________________________________________________________-
+
+class Employee:
+
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+
+    @classmethod
+    def FromStr(cls,string):
+        return cls(string.split("-")[0],string.split("-")[1])
+
+
+e1=Employee("Ruchir","10000")
+print(e1.name)
+print(e1.salary)
+e2=Employee.FromStr("Ruchirr-12000")
+print(e2.name)
+print(e2.salary)
+
+
+
+
+
+# _______________________________________________________________________________-
+# _________________
+#
+#  
+# 
+# 
+# 
+# ______________________________________________________________
 
 from player import Player
 from enemy import Enemy,Troll,Vampire,VampireKing
@@ -563,3 +596,5 @@ print(vlad)
 
 v1=VampireKing("VDracula")
 print(v1)
+
+

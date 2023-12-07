@@ -13,8 +13,9 @@
 
 # with open('Jabberwocky.txt','r') as f1:
 #     f2=f1.read()
-# string
+# # string
 # print(type(f2))
+# print(f2)
 
 # for char in f2:
 #     print(char,end="")
@@ -284,7 +285,29 @@ data = [
 #         print(row)
 
 
-# sniffer class
+# # sniffer class
+# import csv
+
+# # Sample CSV data
+# csv_data = """Name,Age,Occupation
+# John,25,Engineer
+# Jane,30,Doctor
+# Bob,22,Artist
+# """
+
+# # Create a Sniffer instance
+# sniffer = csv.Sniffer()
+
+# # Determine the dialect of the CSV data
+# dialect = sniffer.sniff(csv_data)
+
+# # Create a CSV reader using the detected dialect
+# csv_reader = csv.reader(csv_data.splitlines(), dialect)
+
+# # Read and print each row
+# for row in csv_reader:
+#     print(row)
+
 
 # import csv
 

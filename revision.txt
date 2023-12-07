@@ -1,0 +1,6 @@
+1) revise the videos mentioned in copy
+2) datetime module
+3) oops_> abs,encap,poly
+4)deep copy shallow copy
+5)sets
+6)kwargs and args

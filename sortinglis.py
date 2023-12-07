@@ -6,18 +6,17 @@ x.sort(key=str.casefold())
 print(x)
 
 """
-"""""
-lis=["aa","bb","cc","dd","ee","ff","gg"]
 
-lis[2:4]=["rr"]
-print(lis)
+# lis=["aa","bb","cc","dd","ee","ff","gg"]
 
-"""""
-"""""
+# lis[2:4]=["rr"]
+# print(lis)
+
+
 liss=[23,34,3,45,32,21,53,5,435,34,14,1,4]
 del liss[1:5]
 print(liss)
-"""
+
 """""
 liss=[2,23,34,3,45,32,21,53,5,435,34,14,1,4]
 min=20

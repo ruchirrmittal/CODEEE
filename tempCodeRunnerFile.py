@@ -1,17 +1,8 @@
-class Employee:
+import csv
 
-    def __init__(self,name,salary):
-        self.name=name
-        self.salary=salary
+cer_file='cereal_grains.csv'
 
-    @classmethod
-    def FromStr(cls,string):
-        return cls(string.split("-")[0],string.split("-")[1])
-
-
-e1=Employee("Ruchir","10000")
-print(e1.name)
-print(e1.salary)
-e2=Employee.FromStr("Ruchirr-12000")
-print(e2.name)
-print(e2.salary)
+with open(cer_file,encoding='utf-8',newline='') as data:
+    reader=csv.DictReader(data)
+    for row in reader:
+        print(row)

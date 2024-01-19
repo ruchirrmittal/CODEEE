@@ -1,11 +1,7 @@
-def fib():
-    current,prev=0,1
-    
-    while True:
-        current,prev=current + prev, current
-        yield current
+test=input("Enter something")
 
-ser=fib()
+# output=[len(word) for word in test.split(" ")]
+output=[(word,len(word)) for word in test.split(" ")]
 
-for i in range(10):
-    print(next(ser))
+
+print(output)

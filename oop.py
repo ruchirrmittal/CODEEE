@@ -92,10 +92,12 @@
 #         print("Scared huh?")
 #     return mfx
 
-# # @greet
-# # def name():
-# #     a=input("Enter your name")
-# #     print(a)
+# @greet
+# def name():
+#     a=input("Enter your name")
+#     print(a)
+
+# name()
 
 # @greet
 # def add(a,b):
@@ -550,23 +552,23 @@ if __name__=="__main__":
 # _______________________________________________________________________________-
 # _______________________________________________________________________________-
 
-class Employee:
+# class Employee:
 
-    def __init__(self,name,salary):
-        self.name=name
-        self.salary=salary
+#     def __init__(self,name,salary):
+#         self.name=name
+#         self.salary=salary
 
-    @classmethod
-    def FromStr(cls,string):
-        return cls(string.split("-")[0],string.split("-")[1])
+#     @classmethod
+#     def FromStr(cls,string):
+#         return cls(string.split("-")[0],string.split("-")[1])
 
 
-e1=Employee("Ruchir","10000")
-print(e1.name)
-print(e1.salary)
-e2=Employee.FromStr("Ruchirr-12000")
-print(e2.name)
-print(e2.salary)
+# e1=Employee("Ruchir","10000")
+# print(e1.name)
+# print(e1.salary)
+# e2=Employee.FromStr("Ruchirr-12000")
+# print(e2.name)
+# print(e2.salary)
 
 
 
@@ -590,11 +592,11 @@ chugh=Troll("sss")
 print(ugh)
 print(pugh)
 print(chugh)
-pugh.take_damage(5)
-vlad=Vampire("vlad")
-print(vlad)
+# pugh.take_damage(5)
+# vlad=Vampire("vlad")
+# print(vlad)
 
-v1=VampireKing("VDracula")
-print(v1)
+# v1=VampireKing("VDracula")
+# print(v1)
 
 

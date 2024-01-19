@@ -1,8 +1,11 @@
-import csv
+def fib():
+    current,prev=0,1
+    
+    while True:
+        current,prev=current + prev, current
+        yield current
 
-cer_file='cereal_grains.csv'
+ser=fib()
 
-with open(cer_file,encoding='utf-8',newline='') as data:
-    reader=csv.DictReader(data)
-    for row in reader:
-        print(row)
+for i in range(10):
+    print(next(ser))
